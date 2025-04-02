@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add New Location</h2>
+        <form id="add-location-form">
+            <div class="form-group">
+                <label for="location-id">Location ID</label>
+                <input type="text" id="location-id" name="locationID" required>
+            </div>
+            <div class="form-group">
+                <label for="location-country">Country</label>
+                <input type="text" id="location-country" name="country" required>
+            </div>
+            <div class="form-group">
+                <label for="location-city">City</label>
+                <input type="text" id="location-city" name="city" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Add Location</button>
+            </div>
+        </form>
+    </div>
+    <script src="addlocation.js"></script>
+</body>
+</html>

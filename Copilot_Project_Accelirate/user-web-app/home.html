@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash</title>
+    <link rel="stylesheet" href="/styles-home.css">
+</head>
+
+<body>
+    <header id="navbar-container">
+
+    </header>
+    <main>
+        <h1>Welcome to the Home Page</h1>
+        <p>Select a category to explore:</p>
+        <!-- Additional content can be added here -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+
+    <script>
+        let pathPrefix = window.location.pathname.includes("services") ? "../../" : "src/";
+        // fetch(pathPrefix + "components/navbar.html")
+        
+        fetch("/src/components/navbar.html").then(response => response.text()).then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
+            updateAuthState(); // Call this after navbar is loaded
+        });
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     console.log("iamhrtr")
+        //     const token = localStorage.getItem("authToken");
+
+        //     if (!token) {
+        //         window.location.href = "/user-web-app/src/services/Auth/login.html";
+
+        //     }
+        // });
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     console.log("Checking auth...");
+        //     const token = localStorage.getItem("authToken");
+
+        //     // Prevent infinite redirect if already on the login page
+        //     if (!token && !window.location.pathname.includes("/src/services/Auth/login.html")) {
+        //         console.log("Redirecting to login...");
+        //         window.location.href = "/user-web-app/src/services/Auth/login.html";
+        //     }
+        // });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const token = localStorage.getItem("authToken");
+            const isLoginPage = window.location.pathname.includes("login.html");
+
+            if (!token && !isLoginPage) {
+                // Use absolute path without /user-web-app prefix
+                window.location.href = "/src/services/Auth/login.html";
+            }
+        });
+
+
+        function updateAuthState() {
+            const authLink = document.getElementById("auth-link");
+            if (!authLink) return;
+
+            const token = localStorage.getItem("authToken");
+            if (token) {
+                authLink.innerText = "Logout";
+                authLink.removeAttribute("href");
+                authLink.style.cursor = "pointer";
+                authLink.onclick = logout;
+            } else {
+                authLink.innerText = "Login";
+                authLink.href = "/src/services/Auth/login.html";
+                authLink.style.cursor = "pointer";
+                authLink.onclick = null;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("authToken");
+            alert("Logged out!");
+            updateAuthState();
+        }
+    </script>
+</body>
+
+</html>

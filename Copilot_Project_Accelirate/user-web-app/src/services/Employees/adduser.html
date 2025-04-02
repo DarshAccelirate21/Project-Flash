@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nuevo Empleado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="adduser.css">
+</head>
+<body>
+    <div id="adduser-container" class="user-container">
+        <form id="adduser-form">
+            <label for="employee-id">Employee ID:</label>
+            <input type="text" id="employee-id" name="EmployeeID" required>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="FIRST_NAME" required>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="LAST_NAME" required>
+            <label for="hire-date">Hire Date:</label>
+            <input type="date" id="hire-date" name="HIRE_DATE" required>
+            <label for="status">Status:</label>
+            <select id="status" name="Employee_Status" required>
+                <option value="ACTIVE">ACTIVE</option>
+                <option value="INACTIVE">INACTIVE</option>
+            </select>
+            <label for="is-manager">Manager:</label>
+            <select id="is-manager" name="IsManager" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <script src="adduser.js"></script>
+</body>
+</html>

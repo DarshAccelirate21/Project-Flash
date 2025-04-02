@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="navbar-container"></header>
+    <div class="search-container">
+        <div class="search-group">
+            <label for="name-input">Search by Name</label>
+            <input type="text" id="name-input" placeholder="Name">
+        </div>
+        <div class="search-group">
+            <label for="hire-date-from-input">Hire Date From</label>
+            <input type="date" id="hire-date-from-input">
+        </div>
+        <div class="search-group">
+            <label for="hire-date-to-input">Hire Date To</label>
+            <input type="date" id="hire-date-to-input">
+        </div>
+        <div class="search-group">
+            <label for="status-input">Search by Status</label>
+            <select id="status-input">
+                <option value="">All</option>
+                <option value="ACTIVE">Active</option>
+                <option value="INACTIVE">Inactive</option>
+            </select>
+        </div>
+        <div class="search-group">
+            <label for="allocation-input">Search by %ALLOCATED</label>
+            <select id="allocation-input">
+                <option value="">All</option>
+                <option value="over">Over Allocated</option>
+                <option value="under">Under Allocated</option>
+                <option value="fully">Fully Allocated</option>
+            </select>
+        </div>
+        <div class="search-group">
+            <label for="participation-type-input">Search by Participation Type</label>
+            <select id="participation-type-input">
+                <option value="">All</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="search-group">
+            <label for="location-input">Search by Location</label>
+            <select id="location-input">
+                <option value="">All</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="search-group">
+            <label for="group-code-input">Search by Group Code</label>
+            <select id="group-code-input">
+                <option value="">All</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="search-group">
+            <label for="client-input">Search by Assigned Client</label>
+            <select id="client-input">
+                <option value="">All</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="search-group">
+            <button id="clear-filters-button">Clear All Filters</button>
+        </div>
+    </div>
+    <div id="user-container" class="user-container">
+        <!-- Las tarjetas de usuario se insertarán aquí -->
+    </div>
+    <script src="app.js"></script>
+    <script src="../../../global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="navbar-container"></header>
+    <div class="search-container">
+        <div class="search-group">
+            <label for="group-code-input">Search by Group Code</label>
+            <input type="text" id="group-code-input" placeholder="Group Code">
+        </div>
+        <div class="search-group">
+            <label for="assigned-client-input">Search by Assigned Client</label>
+            <input type="text" id="assigned-client-input" placeholder="Assigned Client">
+        </div>
+        <div class="search-group">
+            <button id="clear-filters-button">Clear All Filters</button>
+        </div>
+    </div>
+    <div id="project-container" class="project-container">
+        <!-- Project cards will be inserted here -->
+    </div>
+    <script src="app.js"></script>
+    <script src="../../../global.js"></script>
+</body>
+</html>

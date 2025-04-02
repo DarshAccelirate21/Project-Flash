@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="navbar-container"></header>
+    <div class="search-container">
+        <div class="search-group">
+            <label for="country-input">Search by Country</label>
+            <input type="text" id="country-input" placeholder="Country">
+        </div>
+        <div class="search-group">
+            <label for="city-input">Search by City</label>
+            <input type="text" id="city-input" placeholder="City">
+        </div>
+        <div class="search-group">
+            <button id="clear-filters-button">Clear All Filters</button>
+        </div>
+    </div>
+    <div id="location-container" class="location-container">
+        <!-- Las tarjetas de ubicación se insertarán aquí -->
+    </div>
+    <script src="app.js"></script>
+    <script src="../../../global.js"></script>
+</body>
+</html>
