@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchProjects() {
-    fetch('http://localhost:2024/api/select/Dim_Project')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Project')
         .then(response => response.json())
         .then(data => {
             const projectContainer = document.getElementById('project-container');
