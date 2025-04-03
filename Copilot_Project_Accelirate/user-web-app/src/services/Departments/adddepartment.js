@@ -12,7 +12,7 @@ document.getElementById('add-department-button').addEventListener('click', () =>
         DEPARTMENT: departmentName
     };
 
-    fetch('http://localhost:2024/api/insert/Dim_Department', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_Department', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
