@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             LOCATIONCITY: city
         };
 
-        fetch(`http://localhost:2024/api/update/Dim_Location/${locationID}`, {
+        fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_Location/${locationID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchLocationData(locationID) {
-    fetch(`http://localhost:2024/api/select/Dim_Location?LocationID=${locationID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Location?LocationID=${locationID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
