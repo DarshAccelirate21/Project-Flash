@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchEmployeeData(employeeID) {
-    fetch(`http://localhost:2024/api/select/Dim_Employee?EmployeeID=${employeeID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Employee?EmployeeID=${employeeID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ function updateEmployeeData(employeeID) {
         }
     });
 
-    fetch(`http://localhost:2024/api/update/Dim_Employee/${employeeID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_Employee/${employeeID}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
