@@ -12,7 +12,7 @@ document.getElementById('add-participation-button').addEventListener('click', ()
         PARTICIPATION_TYPE: participationType
     };
 
-    fetch('http://localhost:2024/api/insert/Dim_Participation', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_Participation', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
