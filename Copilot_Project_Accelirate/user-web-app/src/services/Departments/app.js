@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchDepartments() {
-    fetch('http://localhost:2024/api/select/Dim_Department')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Department')
         .then(response => response.json())
         .then(data => {
             const departmentContainer = document.getElementById('department-container');
