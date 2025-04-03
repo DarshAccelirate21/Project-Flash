@@ -12,7 +12,7 @@ document.getElementById('add-jobposition-button').addEventListener('click', () =
         JOBPOSITION: jobPositionName
     };
 
-    fetch('http://localhost:2024/api/insert/Dim_JobPosition', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_JobPosition', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
