@@ -416,7 +416,7 @@ app.use(express.static(frontendDir));
 
 // Route to render the HTML file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(frontendDir, 'home.html')); // Replace 'index.html' with your file name
+    res.sendFile(path.join(frontendDir, 'index.html')); // Replace 'index.html' with your file name
 });
 
 // app.get('/src/services/Auth/login.html', (req, res) => {
