@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchUsers() {
-    fetch('http://localhost:2024/api/select/vw_Employee_Allocation_Summary')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/vw_Employee_Allocation_Summary')
         .then(response => response.json())
         .then(data => {
             const userContainer = document.getElementById('user-container');
