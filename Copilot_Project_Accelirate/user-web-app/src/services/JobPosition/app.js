@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchJobPositions() {
-    fetch('http://localhost:2024/api/select/Dim_JobPosition')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_JobPosition')
         .then(response => response.json())
         .then(data => {
             const jobPositionContainer = document.getElementById('jobposition-container');
