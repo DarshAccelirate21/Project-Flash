@@ -11,7 +11,7 @@ document.getElementById('add-location-form').addEventListener('submit', function
         LOCATIONCITY: city
     };
 
-    fetch('http://localhost:2024/api/insert/Dim_Location', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_Location', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
