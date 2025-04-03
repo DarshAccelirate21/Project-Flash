@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             JOBPOSITION: jobPositionName
         };
 
-        fetch(`http://localhost:2024/api/update/Dim_JobPosition/${jobPositionID}`, {
+        fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_JobPosition/${jobPositionID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchJobPositionData(jobPositionID) {
-    fetch(`http://localhost:2024/api/select/Dim_JobPosition?JobPositionID=${jobPositionID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_JobPosition?JobPositionID=${jobPositionID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
