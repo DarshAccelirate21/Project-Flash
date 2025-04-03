@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             PARTICIPATION_TYPE: participationType
         };
 
-        fetch(`http://localhost:2024/api/update/Dim_Participation/${participationID}`, {
+        fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_Participation/${participationID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchParticipationData(participationID) {
-    fetch(`http://localhost:2024/api/select/Dim_Participation?ParticipationID=${participationID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Participation?ParticipationID=${participationID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
