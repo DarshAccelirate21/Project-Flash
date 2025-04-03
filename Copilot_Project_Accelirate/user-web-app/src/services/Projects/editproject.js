@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             C_ASSIGNED_CLIENT: assignedClient
         };
 
-        fetch(`http://localhost:2024/api/update/Dim_Project/${projectID}`, {
+        fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_Project/${projectID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchProjectData(projectID) {
-    fetch(`http://localhost:2024/api/select/Dim_Project?ProjectID=${projectID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Project?ProjectID=${projectID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
