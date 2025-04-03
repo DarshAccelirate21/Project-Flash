@@ -24,7 +24,7 @@ function ensureAllocationAlertContainer(retries = 5) {
 
 async function fetchEmployeeData(employeeID) {
     try {
-        const response = await fetchWithRetry(`http://localhost:2024/api/select/Dim_Employee?EmployeeID=${employeeID}`, {
+        const response = await fetchWithRetry(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Employee?EmployeeID=${employeeID}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ function displayEmployeeData(employee) {
 
 async function fetchEmployeeAllocations(employeeID) {
     try {
-        const response = await fetchWithRetry(`http://localhost:2024/api/select/vw_Fact_Employee_Allocation_v2?EmployeeID=${employeeID}`, {
+        const response = await fetchWithRetry(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/vw_Fact_Employee_Allocation_v2?EmployeeID=${employeeID}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -163,7 +163,7 @@ function createAllocationCard(allocation, container) {
     const deleteButton = document.getElementById(`delete-button-${allocation.AllocationID}`);
     deleteButton.addEventListener('click', async () => {
         try {
-            const response = await fetch(`http://localhost:2024/api/update/Fact_Employee_Allocation/${allocation.AllocationID}`, {
+            const response = await fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Fact_Employee_Allocation/${allocation.AllocationID}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -337,7 +337,7 @@ async function displayEditDatesForm(allocation) {
             };
 
             try {
-                const response = await fetch(`http://localhost:2024/api/update/Fact_Employee_Allocation/${allocation.AllocationID}`, {
+                const response = await fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Fact_Employee_Allocation/${allocation.AllocationID}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -480,7 +480,7 @@ async function displayAllocationForm(allocation) {
                         if (cSowEnd.value) updatedAllocation.C_SOW_End = cSowEnd.value.replace(/-/g, '');
 
                         try {
-                            const response = await fetch('http://localhost:2024/api/insert/Fact_Employee_Allocation', {
+                            const response = await fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Fact_Employee_Allocation', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -517,7 +517,7 @@ async function displayAllocationForm(allocation) {
 }
 
 async function fetchData(endpoint) {
-    const response = await fetchWithRetry(`http://localhost:2024/api/select/${endpoint}`, {
+    const response = await fetchWithRetry(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/${endpoint}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
