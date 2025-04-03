@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         // Redirect to login if no token is found
-        window.location.replace("./src/services/Auth/login.html");
+         window.location.href = "/src/services/Auth/login.html";
 
     }
 });
