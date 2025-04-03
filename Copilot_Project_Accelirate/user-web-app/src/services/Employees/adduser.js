@@ -15,7 +15,7 @@ function addNewEmployee() {
         data[key] = value;
     });
 
-    fetch('http://localhost:2024/api/insert/Dim_Employee', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_Employee', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
