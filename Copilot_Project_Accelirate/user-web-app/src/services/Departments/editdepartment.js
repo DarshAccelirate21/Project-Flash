@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             DEPARTMENT: departmentName
         };
 
-        fetch(`http://localhost:2024/api/update/Dim_Department/${departmentID}`, {
+        fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/update/Dim_Department/${departmentID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchDepartmentData(departmentID) {
-    fetch(`http://localhost:2024/api/select/Dim_Department?DepartmentID=${departmentID}`, {
+    fetch(`https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Department?DepartmentID=${departmentID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
