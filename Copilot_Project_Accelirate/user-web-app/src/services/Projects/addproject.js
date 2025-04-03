@@ -11,7 +11,7 @@ document.getElementById('add-project-form').addEventListener('submit', function(
         C_ASSIGNED_CLIENT: assignedClient
     };
 
-    fetch('http://localhost:2024/api/insert/Dim_Project', {
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/insert/Dim_Project', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
