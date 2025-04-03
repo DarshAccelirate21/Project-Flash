@@ -28,7 +28,7 @@ async function handleSignupSubmit(event) {
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirmPassword").value;
 
-  const signUpApiUrl="http://localhost:2024/api/auth/register"
+  const signUpApiUrl="https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/auth/register"
   
 
  try {
