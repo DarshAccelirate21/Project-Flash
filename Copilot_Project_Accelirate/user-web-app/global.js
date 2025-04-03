@@ -28,7 +28,7 @@ function updateAuthState() {
         authLink.onclick = logout;
     } else {
         authLink.innerText = "Login";
-        authLink.href = "src/services/Auth/login.html";
+        authLink.href = "/src/services/Auth/login.html";
         authLink.style.cursor = "pointer";
         authLink.onclick = null;
     }
