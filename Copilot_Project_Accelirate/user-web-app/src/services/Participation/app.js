@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchParticipations() {
-    fetch('http://localhost:2024/api/select/Dim_Participation')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Participation')
         .then(response => response.json())
         .then(data => {
             const participationContainer = document.getElementById('participation-container');
