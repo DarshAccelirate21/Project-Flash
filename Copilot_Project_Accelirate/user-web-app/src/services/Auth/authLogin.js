@@ -24,7 +24,7 @@ async function handleLoginSubmit(event) {
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  const apiUrl = "http://localhost:2024/api/auth/login";
+  const apiUrl = "https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/auth/login";
 
   const data = {
     email: email,
