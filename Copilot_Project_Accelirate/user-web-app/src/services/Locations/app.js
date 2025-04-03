@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchLocations() {
-    fetch('http://localhost:2024/api/select/Dim_Location')
+    fetch('https://flash-backend-cpfrguethpanfhdz.centralus-01.azurewebsites.net/api/select/Dim_Location')
         .then(response => response.json())
         .then(data => {
             const locationContainer = document.getElementById('location-container');
